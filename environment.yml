@@ -4,8 +4,9 @@ channels:
   - defaults
 dependencies:
   - python=3.11
-  - pandas
-  - plotly
-  - streamlit
   - numpy
-  - protobuf>=4.21
+  - pandas
+  - pip
+  - pip:
+    - streamlit
+    - plotly
