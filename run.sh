@@ -48,7 +48,10 @@ fi
 conda activate "$ENV_NAME"
 
 echo "Starting Nanopore QC Dashboard..."
-echo "The app will open in your browser. Press Ctrl+C to stop."
+echo ""
+echo "  Open in your browser:  http://localhost:8501"
+echo ""
+echo "Press Ctrl+C to stop."
 echo ""
 
 streamlit run "$SCRIPT_DIR/app.py"
