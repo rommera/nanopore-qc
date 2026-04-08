@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 256 256"
+   width="256"
+   height="256"
+   version="1.1"
+   id="svg10"
+   sodipodi:docname="icon.svg"
+   inkscape:version="1.4 (e7c3feb, 2024-10-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs10" />
+  <sodipodi:namedview
+     id="namedview10"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="3.3476562"
+     inkscape:cx="128"
+     inkscape:cy="128"
+     inkscape:window-width="1920"
+     inkscape:window-height="1043"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg10" />
+  <!-- Background circle -->
+  <circle
+     cx="128"
+     cy="128"
+     r="120"
+     fill="#1a1a2e"
+     id="circle1" />
+  <circle
+     cx="128"
+     cy="128"
+     r="112"
+     fill="#16213e"
+     id="circle2" />
+  <!-- DNA helix strand 1 -->
+  <path
+     d="M 120.89615,26.856476 C 152.89615,53.523143 240.71879,78.994944 120,120 80.558584,133.39723 61.712952,175.42435 93.712952,202.09102 113.71295,219.42435 156,230.66667 168,240"
+     stroke="#00d2ff"
+     stroke-width="8"
+     fill="none"
+     stroke-linecap="round"
+     id="path2"
+     sodipodi:nodetypes="cscc" />
+  <!-- DNA helix strand 2 -->
+  <path
+     d="m 152.60588,35.510234 c -41.30141,27.186847 -139.237426,50.301885 0,81.560536 24.91261,5.59285 72.96536,39.43788 31.66394,66.62473 -25.81338,17.67144 -78.12803,46.20069 -93.616062,55.71609"
+     stroke="#7b2ff7"
+     stroke-width="9.17683"
+     fill="none"
+     stroke-linecap="round"
+     id="path3"
+     sodipodi:nodetypes="cscc" />
+  <!-- Rungs connecting the strands -->
+  <line
+     x1="112.41088"
+     y1="61.941658"
+     x2="162.10954"
+     y2="61.941658"
+     stroke="#4facfe"
+     stroke-width="3.37042"
+     stroke-linecap="round"
+     opacity="0.7"
+     id="line3" />
+  <line
+     x1="111.50201"
+     y1="99.336319"
+     x2="161.20067"
+     y2="99.336319"
+     stroke="#4facfe"
+     stroke-width="3.37042"
+     stroke-linecap="round"
+     opacity="0.7"
+     id="line3-3" />
+  <line
+     x1="92.53418"
+     y1="80.739792"
+     x2="183.47983"
+     y2="80.739792"
+     stroke="#4facfe"
+     stroke-width="3.60447"
+     stroke-linecap="round"
+     opacity="0.7"
+     id="line4" />
+  <line
+     x1="91.052505"
+     y1="149.87164"
+     x2="187.05251"
+     y2="149.87164"
+     stroke="#4facfe"
+     stroke-width="4"
+     stroke-linecap="round"
+     opacity="0.7"
+     id="line5" />
+  <line
+     x1="108.96149"
+     y1="132.37573"
+     x2="164.96149"
+     y2="132.37573"
+     stroke="#4facfe"
+     stroke-width="4"
+     stroke-linecap="round"
+     opacity="0.7"
+     id="line6" />
+  <line
+     x1="77.675613"
+     y1="169.54492"
+     x2="189.67561"
+     y2="169.54492"
+     stroke="#4facfe"
+     stroke-width="4"
+     stroke-linecap="round"
+     opacity="0.7"
+     id="line7" />
+  <line
+     x1="91.207703"
+     y1="194.46675"
+     x2="161.2077"
+     y2="194.46675"
+     stroke="#4facfe"
+     stroke-width="4"
+     stroke-linecap="round"
+     opacity="0.7"
+     id="line8" />
+  <!-- Bar chart overlay (bottom right) representing QC -->
+  <rect
+     x="160"
+     y="178"
+     width="14"
+     height="32"
+     rx="2"
+     fill="#00d2ff"
+     opacity="0.9"
+     id="rect8" />
+  <rect
+     x="178"
+     y="162"
+     width="14"
+     height="48"
+     rx="2"
+     fill="#4facfe"
+     opacity="0.9"
+     id="rect9" />
+  <rect
+     x="196"
+     y="172"
+     width="14"
+     height="38"
+     rx="2"
+     fill="#7b2ff7"
+     opacity="0.9"
+     id="rect10" />
+  <!-- "QC" text -->
+  <text
+     x="128"
+     y="258"
+     text-anchor="middle"
+     font-family="Arial, sans-serif"
+     font-weight="bold"
+     font-size="0"
+     fill="#4facfe"
+     id="text10">QC</text>
+</svg>
