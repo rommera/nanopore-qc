@@ -28,11 +28,20 @@ fi
 # Source conda shell functions so 'conda activate' works
 eval "$("$CONDA_EXE" shell.bash hook)"
 
-# --- Create environment if it doesn't exist ---
+# --- Create or update environment ---
 if ! conda env list | grep -q "^${ENV_NAME} "; then
     echo "Creating conda environment '${ENV_NAME}'..."
     conda env create -f "$ENV_FILE"
     echo ""
+else
+    # Update environment if environment.yml has changed since last update
+    ENV_STAMP="$(conda info --envs | grep "^${ENV_NAME} " | awk '{print $NF}')/.env_updated"
+    if [ ! -f "$ENV_STAMP" ] || [ "$ENV_FILE" -nt "$ENV_STAMP" ]; then
+        echo "Updating conda environment '${ENV_NAME}'..."
+        conda env update -f "$ENV_FILE" --prune
+        touch "$ENV_STAMP"
+        echo ""
+    fi
 fi
 
 # --- Activate and run ---
