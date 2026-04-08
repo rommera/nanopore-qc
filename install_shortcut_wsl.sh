@@ -36,9 +36,9 @@ cat > "$BAT_FILE" <<BATEOF
 @echo off
 echo Starting Nanopore QC Dashboard...
 echo.
-echo The dashboard will open in your browser shortly.
 echo Keep this window open. Press Ctrl+C to stop.
 echo.
+start "" http://localhost:8501
 wsl -d ${WSL_DISTRO} -- bash -lc "cd '${SCRIPT_DIR}' && ./run.sh"
 BATEOF
 

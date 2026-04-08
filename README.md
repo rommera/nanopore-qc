@@ -18,7 +18,7 @@ That's it — the launcher script handles everything else.
 ## Quick start
 
 ```bash
-git clone <this-repo-url>
+git clone https://github.com/rommera/nanopore-qc.git
 cd nanopore-qc
 ./run.sh
 ```
