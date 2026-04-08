@@ -2,10 +2,41 @@
 
 import gzip
 import os
+import re
+import subprocess
 from pathlib import Path
 
 import numpy as np
 import pandas as pd
+
+
+def _convert_windows_path(path: str) -> str:
+    """Convert a Windows path to a WSL path if running under WSL2.
+
+    E.g. 'C:\\Users\\user\\data' -> '/mnt/c/Users/user/data'
+    Also handles 'C:/Users/user/data' style paths.
+    """
+    path = path.strip().strip('"').strip("'")
+
+    # Check if it looks like a Windows path (drive letter)
+    if re.match(r'^[A-Za-z]:[/\\]', path):
+        # Try wslpath first (most reliable)
+        try:
+            result = subprocess.run(
+                ["wslpath", "-u", path],
+                capture_output=True, text=True, timeout=5,
+            )
+            if result.returncode == 0:
+                return result.stdout.strip()
+        except (FileNotFoundError, subprocess.TimeoutExpired):
+            pass
+
+        # Fallback: manual conversion
+        drive = path[0].lower()
+        rest = path[2:].replace("\\", "/")
+        return f"/mnt/{drive}{rest}"
+
+    return path
 
 
 def _phred_scores(quality_string: str) -> np.ndarray:
@@ -64,6 +95,7 @@ def parse_fastq_pass(fastq_pass_dir: str, progress_callback=None) -> pd.DataFram
 
     Also handles flat structure (FASTQ files directly in the directory).
     """
+    fastq_pass_dir = _convert_windows_path(fastq_pass_dir)
     base = Path(fastq_pass_dir)
     if not base.is_dir():
         raise FileNotFoundError(f"Directory not found: {fastq_pass_dir}")
